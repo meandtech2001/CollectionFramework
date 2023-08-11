@@ -177,7 +177,7 @@ namespace ConceptArchitect.Collections
             return new LinkedListEnumerator<X>(this);
         }
 
-        private class LinkedListEnumerator<X> : IEnumerator<X>
+        public class LinkedListEnumerator<X> : IEnumerator<X>
         {
             private LinkedList<X> list;
             private LinkedList<X>.Node current = null;
