@@ -1,7 +1,7 @@
 ﻿using ConceptArchitect.Utils;
 using System.Diagnostics;
 
-internal class PrimeProgram
+internal class Program
 {
     private static void Main()
     {
@@ -11,16 +11,16 @@ internal class PrimeProgram
 
         //using LINQ ---------------method 5
 
-        //var primeLinq = (from prime in new PrimeEnumerator(min, max)
-        //                 where prime % 10 == 7
-        //                 select prime)
-        //                 .Skip(10)
-        //                 .Take(5);
+        var primeLinq = (from prime in new PrimeEnumerator(min, max)
+                         where prime % 10 == 7
+                         select prime)
+                         .Skip(10)
+                         .Take(5);
 
-        //foreach (var prime in primeLinq)
-        //{
-        //    Console.WriteLine(prime);
-        //}
+        foreach (var prime in primeLinq)
+        {
+            Console.WriteLine(prime);
+        }
     }
 
     public int PrimeFinderWithCallBack(int min, int max, int count)
